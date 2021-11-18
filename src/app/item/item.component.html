@@ -1,0 +1,42 @@
+<div class="container">
+    <br />
+    <div class="row">
+      <div class="col">
+        <h4>Items</h4>
+       
+      </div>
+      <div class="col text-right">
+        <a href="#" routerLink="/items/add/" class="btn btn-success btn-sm">Create New</a>
+      </div>
+    </div>
+    <br />
+    <table class="table table-bordered table-sm">
+      <tr>
+        <th>Item Number</th>
+        <th>Item Name</th>
+        <th>Colour</th>
+        <th>Prize</th>
+        
+        
+        <th width="200px"></th>
+      </tr>
+      <tr *ngFor="let Item of items">
+        <td>{{Item.itemNumber }}</td>
+        
+        <td>{{Item.itemName  }}</td>
+        <td>{{Item.color }}</td>
+        <td>{{ Item.value }}</td>
+       
+       
+        <td class="text-right">
+            
+          <a href="#" [routerLink]="['/items/', Item.itemNumber, 'show']" class="btn btn-info btn-sm">View</a>
+          <a href="#" [routerLink]="['/items/',Item.itemNumber, 'edit']" class="btn btn-primary btn-sm">Edit</a>
+           <button type="button" (click)="deleteItem(Item.itemNumber)" class="btn btn-danger btn-sm">Delete</button> 
+        </td>
+      </tr>
+    </table>
+  </div>
+  
+
+

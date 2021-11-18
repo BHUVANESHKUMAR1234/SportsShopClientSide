@@ -1,0 +1,51 @@
+<div class="container">
+    <br />
+    <div class="row">
+      <div class="col">
+        <h3>Create Customer</h3>
+      </div>
+      <div class="col text-right">
+        <a href="#" routerLink="/customers" class="btn btn-secondary btn-sm">Back To customers List</a>
+      </div>
+    </div>
+    <br />
+    <form [formGroup]="createForm" (ngSubmit)="onSubmit(createForm)">
+        
+     
+   
+      <div class="form-group">
+        <label for="customerName">customerName:</label>
+        <input formControlName="customerName"
+               id="customerName"
+               type="text"
+               class="form-control" />
+      </div>
+   
+      
+   
+      <div class="form-group">
+        <label for="contactNumber">contactNumber:</label>
+        <input formControlName="contactNumber"
+               id="contactNumber"
+               type="text"
+               class="form-control" />
+      </div>
+   
+      <div class="form-group">
+        <label for="address">address:</label>
+        <input formControlName="address"
+               id="address"
+               type="text"
+               class="form-control" />
+      </div>
+      <div class="form-group">
+        <label for="emailId">emailId:</label>
+        <input formControlName="emailId"
+               id="emailId"
+               type="text"
+               class="form-control" />
+      </div>
+   
+      <button class="btn btn-primary" type="submit" [disabled]="!createForm.valid">Create</button>
+    </form>
+  </div>

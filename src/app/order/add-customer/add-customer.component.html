@@ -1,0 +1,54 @@
+<div class="container">
+    <br />
+    <div class="row">
+      <div class="col">
+        <h3>Create Order</h3>
+      </div>
+      <div class="col text-right">
+        <a href="#" routerLink="/orders" class="btn btn-secondary btn-sm">Back To orders List</a>
+      </div>
+    </div>
+    <br />
+    <form [formGroup]="createForm" (ngSubmit)="onSubmit(createForm)">
+     
+   
+        <div class="form-group">
+            <label for="orderDate">orderDate:</label>
+            <input formControlName="orderDate"
+                   id="orderDate"
+                   type="date"
+                   class="form-control" />
+          </div>
+       
+          
+       
+          <div class="form-group">
+            <label for="customerId">customerId:</label>
+            <input formControlName="customerId"
+                   id="customerId"
+                   type="number"
+                   class="form-control" />
+          </div>
+       
+          <div class="form-group">
+            <label for="itemNumber">ItemNumber:</label>
+            <input formControlName="itemNumber"
+                   id="itemNumber"
+                   type="number"
+                   
+                   class="form-control" />
+          </div>
+          <div class="form-group">
+            <label for="orderAddress">orderAddress:</label>
+            <input formControlName="orderAddress"
+                   id="orderAddress"
+                   type="text"
+                   
+                   class="form-control" />
+          </div>
+     
+   
+          <button class="btn btn-primary" type="submit" [disabled]="!createForm.valid">Create</button>
+    </form>
+  </div>
+

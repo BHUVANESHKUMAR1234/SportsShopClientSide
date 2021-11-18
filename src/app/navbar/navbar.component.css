@@ -1,0 +1,27 @@
+a.navbar-brand {
+    white-space: normal;
+    text-align: center;
+    word-break: break-all;
+    font-size: 30px;
+  }
+
+  .nav-item
+  {
+    font-size: 20px;
+    color: blue;
+
+  }
+  
+  html {
+    font-size: 30px;
+  }
+  @media (min-width: 768px) {
+    html {
+      font-size: 30px;
+    }
+  }
+  
+  .box-shadow {
+    box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+  }
+  

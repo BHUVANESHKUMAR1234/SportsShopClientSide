@@ -1,0 +1,25 @@
+<div class="container">
+    <br />
+    <h3>Item Details</h3>
+    <br />
+    <div class="card">
+      <div class="card-header">
+        <div class="row">
+          <div class="col">
+            <h2>{{  order.orderNumber}}</h2> 
+          </div>
+          <div class="col text-right">
+            <a href="#" routerLink="/item" class="btn btn-secondary btn-sm">Back To items List</a>
+          </div>
+        </div>
+      </div>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item"><b>order Number:</b> {{ order.orderNumber }}</li>
+        <li class="list-group-item"><b>order Date:</b> {{ order.orderDate }}</li>
+        <li class="list-group-item"><b>Customer Id:</b> {{ order.customerId }}</li>
+        <li class="list-group-item"><b>Item Number:</b> {{ order.itemNumber }}</li>
+        <li class="list-group-item"><b>Order Address:</b> {{ order.orderAddress }}</li>
+       </ul>
+    </div>
+  </div>
+
