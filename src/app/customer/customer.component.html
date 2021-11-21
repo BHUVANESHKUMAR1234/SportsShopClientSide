@@ -2,11 +2,12 @@
     <br />
     <div class="row">
       <div class="col">
-        <h4>Customers</h4>
+        <h4 style="font-size:25px;">Customers</h4>
        
       </div>
       <div class="col text-right">
-        <a href="#" routerLink="/customers/add" class="btn btn-success btn-sm">Create New</a>
+        <a href="#" routerLink="/customers/grid" class="btn btn-primary btn-sm"><mat-icon>grid_on</mat-icon></a>
+        <a href="#" routerLink="/customers/add" class="btn btn-success btn-sm"><mat-icon>person_add</mat-icon></a>
       </div>
     </div>
     <br />
@@ -19,7 +20,7 @@
         <th>Email</th>
         
         
-        <th width="200px"></th>
+        <th width="250px"></th>
       </tr>
       <tr *ngFor="let Customer of customers">
         <td>{{Customer.customerId }}</td>
@@ -36,6 +37,7 @@
           <!-- <a href="#"(click)="view(customer.customerId)" class="btn btn-info btn-sm">View</a> -->
           <a href="#" [routerLink]="['/customers/',Customer.customerId, 'show']" class="btn btn-info btn-sm">view</a>
           <a href="#" [routerLink]="['/customers/',Customer.customerId, 'edit']" class="btn btn-primary btn-sm">Edit</a>
+          <a href="#" [routerLink]="['/customers/',Customer.customerId, 'showOrder']" class="btn btn-success btn-sm">Orders</a>
            <button type="button" (click)="deleteCustomer(Customer.customerId)" class="btn btn-danger btn-sm">Delete</button> 
         </td>
       </tr>

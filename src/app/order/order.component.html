@@ -2,7 +2,7 @@
     <br />
     <div class="row">
       <div class="col">
-        <h4>Orders</h4>
+        <h4 style="font-size:25px;">Orders</h4>
        
       </div>
       <div class="col text-right">
@@ -17,27 +17,53 @@
         <th>Customer ID</th>
         <th>Item Number</th>
         <th>Order Address</th>
+        <th>Price</th>
+        <th>quantity</th>
+        <th>Total</th>
+        <!-- <th>Price</th>
+        <th>quantity</th>
+        <th>total</th> -->
+       
         
         
         
-        <th width="200px"></th>
+        <th width="250px"></th>
       </tr>
       <tr *ngFor="let Order of orders">
         <td>{{Order.orderNumber }}</td>
         <td>{{Order.orderDate  }}</td>
         <td>{{Order.customerId }}</td>
-        <td>{{ Order.itemNumber }}</td>
-        <td>{{ Order.orderAddress }}</td>
+        <td>{{Order.itemNumber }}</td>
+        <td>{{Order.orderAddress }}</td>
+        <td>{{Order.price }}</td>
+          <td>{{Order.quantity }}</td> 
+          <td>{{Order.total }}</td> 
+       
+       
+        <!-- <td>{{Order.price }}</td>
+           {{Order.quantity }} 
+        <td>{{Order.total }}</td> -->
+           
+   
+      
+        
+          <!-- <TD class = "select">Online Password (Repeated)         
+           </TD>    -->
+         
         
        
        
         <td class="text-right">
+          <a href="#" [routerLink]="['/items/',Order.itemNumber, 'show']" class="btn btn-success btn-sm">ItemDetails</a>
           <a href="#" [routerLink]="['/orders/', Order.orderNumber, 'show']" class="btn btn-info btn-sm">View</a>
           <a href="#" [routerLink]="['/orders/',Order.orderNumber, 'edit']" class="btn btn-primary btn-sm">Edit</a>
            <button type="button" (click)="deleteOrder(Order.orderNumber)" class="btn btn-danger btn-sm">Delete</button>  
         </td>
       </tr>
     </table>
+
+
+    
   </div>
   
 

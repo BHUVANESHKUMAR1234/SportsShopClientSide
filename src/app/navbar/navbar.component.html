@@ -3,7 +3,8 @@
       class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-primary border-bottom box-shadow mb-3">
     
       <div class="container">
-        <a class="navbar-brand" [routerLink]="['/']">SportsShop</a>
+        <img src="https://ultradigitalsuite.com/repo/images/sports-shop-logo.jpg" alt="image" class="img-fluid"style="height:40px;"  >
+        <a class="navbar-brand"style= "Color:white;font-family: 'Times New Roman', Times, serif ;"[routerLink]="['/']">SportsShop</a>
         <!-- <button
           class="navbar-toggler"
           type="button"
@@ -20,19 +21,20 @@
           [ngClass]="{ show: isExpanded }"
         >
           <ul class="navbar-nav flex-grow">
-            <li class="nav-item"
+            <li class="active nav-item" 
                 [routerLinkActive]="['link-active']"
-                [routerLinkActiveOptions]="{ exact: true }">  
-              <a class="nav-link text-light" [routerLink]="['/home']">Home</a>
+                [routerLinkActiveOptions]="{ exact: true }">
+               
+              <a class="nav-link text-light" [routerLink]="['/home']"> <mat-icon>home</mat-icon>  Home</a>
             </li>
             <li class="nav-item" [routerLinkActive]="['link-active']">
-              <a class="nav-link text-light" [routerLink]="['/customer']">Customers</a>
+              <a class="nav-link text-light" [routerLink]="['/customer']"><mat-icon>person</mat-icon>Customers</a>
             </li>
             <li class="nav-item" [routerLinkActive]="['link-active']">
-              <a class="nav-link text-light" [routerLink]="['/item']">Items</a>
+              <a class="nav-link text-light" [routerLink]="['/item']"><mat-icon>shopping_basket</mat-icon>Items</a>
             </li>
             <li class="nav-item" [routerLinkActive]="['link-active']">
-              <a class="nav-link text-light" [routerLink]="['/order']">Orders</a>
+              <a class="nav-link text-light" [routerLink]="['/order']"><mat-icon>shopping_cart</mat-icon>Orders</a>
             </li>
   
   

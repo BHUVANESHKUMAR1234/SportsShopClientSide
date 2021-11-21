@@ -29,6 +29,7 @@ export class EditOrderComponent implements OnInit {
         customerId: [''],
         itemNumber: [''],
         orderAddress: [''],
+        quantity:0,
        
       });
       }

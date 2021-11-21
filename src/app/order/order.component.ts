@@ -1,7 +1,12 @@
 import { Component, OnInit } from '@angular/core';
+import {  FormBuilder, Validators } from '@angular/forms';
 
 import { Order } from '../Models/order-model'; 
 import { OrderService } from '../services/order.service'; 
+
+//import { MAT_DIALOG_DATA, MatDialogRef } from "@angular/material";
+import { ActivatedRoute, Router } from '@angular/router';
+import { NgForm } from '@angular/forms';
 @Component({
   selector: 'app-order',
   templateUrl: './order.component.html',
@@ -11,6 +16,8 @@ export class OrderComponent implements OnInit {
 
   
   orders: Order[] = [];
+  formData: any;
+  data: any;
 
   constructor(public OrderService: OrderService) { }
 
@@ -31,6 +38,11 @@ export class OrderComponent implements OnInit {
       this.orders = this.orders.filter(item => item.orderNumber!== id);
     });
   }
+
+
+
+
+  
 
 
 }

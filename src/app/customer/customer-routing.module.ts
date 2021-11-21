@@ -6,6 +6,10 @@ import { ShowCustomerComponent } from './show-customer/show-customer.component';
 import { EditCustomerComponent } from './edit-customer/edit-customer.component';
 import { AddCustomerComponent } from './add-customer/add-customer.component';
 import { DeleteCustomerComponent } from './delete-customer/delete-customer.component';
+import { CustomerOrderComponent } from './customer-order/customer-order.component';
+import { GridviewComponent } from './gridview/gridview.component';
+
+
 
 const routes: Routes = [
   { path: 'customers', redirectTo: 'customer', pathMatch: 'full' },
@@ -15,7 +19,9 @@ const routes: Routes = [
   //{ path: 'Customer/:CustomerId/details', component: ShowCustomerComponent  },
   { path: 'customers/add', component:AddCustomerComponent  },
   { path: 'customers/:customerId/edit', component: EditCustomerComponent },
-  { path: 'customers/:customerId/delete', component: DeleteCustomerComponent }
+  { path: 'customers/:customerId/showOrder', component:CustomerOrderComponent },
+  { path: 'customers/:customerId/delete', component: DeleteCustomerComponent },
+  { path: 'customers/grid', component: GridviewComponent }
 ];
 
 @NgModule({

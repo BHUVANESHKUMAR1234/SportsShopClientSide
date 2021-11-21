@@ -1,0 +1,49 @@
+<div class="container">
+    <br />
+    <div class="row">
+      <div class="col">
+        <h4>Orders</h4>
+       
+      </div>
+      <div class="col text-right">
+        <a href="#" routerLink="/customer" class="btn btn-secondary btn-sm">Back To customers List</a>
+      </div>
+      <div class="col text-right">
+        <a href="#" routerLink="/orders/add/" class="btn btn-success btn-sm">Create New</a>
+      </div>
+    </div>
+    <br />
+    <table class="table table-bordered table-sm">
+      <tr>
+        <th>Order Number</th>
+        <th>Order Date</th>
+        <th>Customer ID</th>
+        <th>Item Number</th>
+        <th>Order Address</th>
+        <th>Price</th>
+        <th>quantity</th>
+        <th>Total</th>
+        
+        
+        
+       
+      </tr>
+      <tr *ngFor="let Order of orders">
+        <td>{{Order.orderNumber }}</td>
+        <td>{{Order.orderDate  }}</td>
+        <td>{{Order.customerId }}</td>
+        <td>{{ Order.itemNumber }}</td>
+        <td>{{ Order.orderAddress }}</td>
+        <td>{{Order.price }}</td>
+        <td>{{Order.quantity }}</td> 
+        <td>{{Order.total }}</td> 
+        
+       
+    
+      </tr>
+    </table>
+  </div>
+  
+
+
+
