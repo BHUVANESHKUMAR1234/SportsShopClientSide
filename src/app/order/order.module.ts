@@ -1,7 +1,9 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { BrowserModule } from '@angular/platform-browser';
 
-import{ReactiveFormsModule} from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import {MAT_DIALOG_DATA} from '@angular/material/dialog'
 
 import { OrderRoutingModule } from './order-routing.module';
 
@@ -17,7 +19,7 @@ import { DeleteCustomerComponent } from './delete-customer/delete-customer.compo
 @NgModule({
   declarations: [ShowOrderComponent,EditOrderComponent, AddCustomerComponent, DeleteCustomerComponent],
   imports: [
-    CommonModule,
+    CommonModule,FormsModule,BrowserModule,
     OrderRoutingModule,ReactiveFormsModule
   ]
 })
