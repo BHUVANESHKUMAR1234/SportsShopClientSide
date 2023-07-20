@@ -11,7 +11,7 @@ import { Order } from '../Models/order-model';
 })
 export class CustomerService {
 
-  private apiURL = "http://localhost:7161/api";
+  private apiURL = "https://sportshopbackend-production.up.railway.app/api";
   httpOptions = {
     headers: new HttpHeaders({
       'Content-Type': 'application/json'
